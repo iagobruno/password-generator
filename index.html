@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de senha</title>
+  </head>
+  <body>
+    <main id="app">
+      <h1 style="margin-bottom:0">🔑</h1>
+      <h1>Gerador de senha</h1>
+
+      <div class="field col">
+        <label for="length">Tamanho:</label>
+        <select id="length">
+          <optgroup label="Fraca">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10" selected>10</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+          </optgroup>
+          <optgroup label="Forte">
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+            <option value="128">128</option>
+            <option value="256">256</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="field">
+        <input type="checkbox" id="numbers" checked>
+        <label for="numbers">Incluir números</label>
+      </div>
+
+      <div class="field">
+        <input type="checkbox" id="symbols" checked>
+        <label for="symbols">Incluir símbolos (#!&$@_-+=*~[{)</label>
+      </div>
+
+      <div class="field">
+        <input type="checkbox" id="uppercase" checked>
+        <label for="uppercase">Incluir letras maiúsculas</label>
+      </div>
+
+      <div class="result">
+        <div class="buttons">
+          <button id="new-pass">Gerar nova senha</button>
+          <button id="copy-pass">Copiar senha</button>
+        </div>
+        <input type="text" id="result-field">
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
